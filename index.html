@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+   <head>
+      <title>Hola mundo!</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div class="container">
+         <header class="header clearfix">
+            <h1>canvas v/s svg</h1>
+         </header>
+         <div class="row align-items-end">
+            <div class="col-md-12">
+               <h4>Juntos, no revueltos</h4>
+               <p class="lead">&darr; Primero tenemos un <a href="https://es.wikipedia.org/wiki/Canvas_(HTML)">canvas</a>, luego un <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">svg</a></p>
+            </div>
+            <!--en orden alfabético-->
+            <div class="col-lg-6">
+              <!--canvas-->
+               <canvas id="primerCanvas" width="370" height="182" style="background:#ddd;"></canvas>
+               <script>
+                  var canvas = document.getElementById("primerCanvas");
+                  var texto = canvas.getContext("2d");
+                  texto.font = "20px Arial";
+                  texto.fillText("Soy un canvas, mírame de cerca.",20,40);           
+               </script>
+              <!--svg-->
+               <svg width="370" height="182" style="background:#ddd;">
+                   <text x="20" y="40" fill="black" style="font-size:20px;">Soy un svg, mírame de cerca.</text>
+               </svg>
+            </div>
+            <div class="col-lg-6">
+               <p>En W3Schools pueden encontrar un <a href="https://www.w3schools.com/graphics/canvas_intro.asp">tutorial de canvas</a>, que incluye una página referida al <a href="https://www.w3schools.com/graphics/canvas_text.asp">texto en canvas</a>. También pueden encontrar un <a href="https://www.w3schools.com/graphics/svg_intro.asp">tutorial de svg</a>, que incluye una página referida al <a href="https://www.w3schools.com/graphics/svg_text.asp">texto en svg</a>. Revisen esas páginas.</p>
+               <p>Si presento aquí canvas y svg, es porque <strong>p5.js utiliza el primero</strong> mientras <strong>d3.js utiliza el segundo</strong>.</p>
+               <p><strong>¿Qué es p5.js y qué es d3.js?</strong> El apellido <strong>.js</strong> puede darles una pista: Ambas son bibliotecas de JavaScript. Mientras p5.js es una biblioteca que reinterpreta Processing para la Web, d3.js es una biblioteca desarrollada específicamente para producir visualizaciones de datos en Web.</p>
+               <p><a href="index.html" class="text-muted">intro</a> / Revisemos primero <a href="detres.html">svg con d3.js</a></p>
+            </div>
+         </div>
+         <!--col-->
+      </div>
+      <!--row-->
+      </div><!--container-->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   </body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+   <head>
+      <title>Hola mundo!</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div class="container">
+         <header class="header clearfix">
+            <h1>canvas v/s svg</h1>
+         </header>
+         <div class="row align-items-end">
+            <div class="col-md-12">
+               <h4>Juntos, no revueltos</h4>
+               <p class="lead">&darr; Esto es <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">svg</a></p>
+            </div>
+            <div class="col-lg-6">
+               <svg width="370" height="370" style="background:#ddd;">
+                  <g transform="translate(115, 20)">
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                     <rect />
+                  </g>
+                  <g transform="translate(20, 20)">
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                     <text />
+                  </g>
+               </svg>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+               <script>
+                  var cities = [
+                    { name: 'Chongqing', population: 30165500},
+                    { name: 'Shanghai', population: 24256800},
+                    { name: 'Beijing', population: 21516000},
+                    { name: 'Delhi', population: 16787941},
+                    { name: 'Lagos', population: 16060303},
+                    { name: 'Karachi', population: 14910352},
+                    { name: 'Dhaka', population: 14543124},
+                    { name: 'Guangzhou', population: 14043500},
+                    { name: 'Istanbul', population: 14025000},
+                    { name: 'Tokyo', population: 13513734},
+                    { name: 'Mumbai', population: 12478447},
+                    { name: 'Moscow', population: 12197596}  
+                  ];
+                  
+                  d3.selectAll('rect')
+                    .data(cities)
+                    .attr('height', 15)
+                    .attr('width', function(d) {
+                      var scaleFactor = 0.0000075;
+                      return d.population * scaleFactor;
+                    })
+                    .attr('y', function(d, i) {
+                      return i * 28;
+                    })
+                  
+                  d3.selectAll('text')
+                    .data(cities)
+                    .attr('y', function(d, i) {
+                      return i * 28 + 13;
+                    })
+                    .attr('x', -4)
+                    .text(function(d) {
+                      return d.name;
+                    });
+                  
+               </script>        
+            </div>
+            <div class="col-lg-6">
+               <p class="lead">Acá tenemos un &lt;svg&gt;&lt;/svg&gt; dibujado con d3.js</p>
+               <p>Esta es una de las bibliotecas más adecuadas para hacer visualización de datos en web, en tanto fue concebida con tal objetivo. Pero no está hecha para principiantes. En caso <a href="https://jsparagatos.com/">no domines JavaScript</a>, debes armarte de paciencia.</p>
+               <p><a href="http://d3indepth.com/datajoins/">Data joins</a> es la forma más sencilla de comenzar a entender <a href="https://d3js.org/">d3.js</a>: Dada una matriz de datos y una selección D3, podemos adjuntar o unir cada elemento de la matriz a cada elemento de la selección. La explicación de esto y otras cosas, lo puedes encontrar en <a href="http://d3indepth.com/">D3 in Depth</a>.</p>
+               <p><a href="index.html">intro</a> / Revisemos primero <a href="detres.html" class="text-muted">svg con d3.js</a></p>
+            </div>
+         </div>
+         <!--col-->
+      </div>
+      <!--row-->
+      </div><!--container-->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+   </body>
+</html>

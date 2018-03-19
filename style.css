@@ -1,0 +1,9 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	padding-top:1.5rem;
+ 	margin-bottom: 3rem; /* Margin bottom by footer height */
+}
+p{margin-top:1rem;}
