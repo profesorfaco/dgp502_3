@@ -8,7 +8,7 @@ En la [clase recién pasada](https://github.com/profesorfaco/dgp502_2), cerramos
 
 - [HTML5](https://developer.mozilla.org/es/docs/HTML/HTML5), [CSS3](https://developer.mozilla.org/es/docs/Web/CSS/CSS3) y [JavaScript](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics) (con [Bootstrap](https://getbootstrap.com/))
 - [JSON](https://www.json.org/json-es.html) y [GeoJSON](http://geojson.org/)
-- [SVG](https://developer.mozilla.org/es/docs/Web/SVG) v/s [CANVAS](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Canvas_tutorial)
+- [SVG](https://developer.mozilla.org/es/docs/Web/SVG) y [CANVAS](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Canvas_tutorial)
 - [D3.js](https://d3js.org/)
 
 - - - - 
