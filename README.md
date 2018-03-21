@@ -18,7 +18,8 @@ Vamos con el primero: [SVG (Scalable Vector Graphics)](https://developer.mozilla
 
 Ahora, el segundo: [Canvas (en castellano, lienzo)](https://developer.mozilla.org/es/docs/Web/HTML/Canvas) se puede utilizar para dibujar gráficos a través de secuencias de comandos JavaScript: 
 
-```<canvas id="miCanvas" width="400" height="400" style="background:silver;"></canvas>
+```
+<canvas id="miCanvas" width="400" height="400" style="background:silver;"></canvas>
 <script>
   var canvas = document.getElementById('miCanvas');
   var context = canvas.getContext('2d');
