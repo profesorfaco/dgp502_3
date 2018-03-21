@@ -16,7 +16,21 @@ Entre lo recién mencionado, tenemos 2 elementos de HTML como espacios para trab
 
 Vamos con el primero: [SVG (Scalable Vector Graphics)](https://developer.mozilla.org/es/docs/Web/SVG) es un dialecto de marcado XML W3C para la generación de gráficos, con [sus propios elementos](https://developer.mozilla.org/es/docs/Web/SVG/Element).
 
-Ahora, el segundo: [Canvas (en castellano, lienzo)](https://developer.mozilla.org/es/docs/Web/HTML/Canvas) se puede utilizar para dibujar gráficos a través de secuencias de comandos (por lo general JavaScript).
+Ahora, el segundo: [Canvas (en castellano, lienzo)](https://developer.mozilla.org/es/docs/Web/HTML/Canvas) se puede utilizar para dibujar gráficos a través de secuencias de comandos JavaScript: 
+
+```<canvas id="miCanvas" width="400" height="400" style="background:silver;"></canvas>
+<script>
+  var canvas = document.getElementById('miCanvas');
+  var context = canvas.getContext('2d');
+  var centerX = canvas.width / 2;
+  var centerY = canvas.height / 2;
+  var radius = 70;
+  context.beginPath();
+  context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+  context.fillStyle = '#333';
+  context.fill();
+</script>
+```
 
 - - - - 
 
