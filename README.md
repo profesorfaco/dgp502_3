@@ -32,13 +32,17 @@ Como aprender SVG implica aprender un nuevo dialecto, [vamos a explorarlo un poc
 
 Ahora volvamos a [D3.js](https://d3js.org/). Como otras bibliotecas de Javascript, necesita ver vinculada a nuestro documento HTML. En este caso, podemos vincularla agregando: 
 
-```<script src="https://d3js.org/d3.v5.min.js"></script>```
+```
+<script src="https://d3js.org/d3.v5.min.js"></script>
+```
 
 Una vez haya sido vinculada, estamos listos para simplificar el trabajo con datos en JavaScript. 
 
 Recordarán que si queríamos manipular, vía DOM, un elemento como el párrafo, teníamos que indicar algo como: 
 
-```document.getElementsByTagName("p")[0].style.setProperty("color", "red", null);```
+```
+document.getElementsByTagName("p")[0].style.setProperty("color", "red", null);
+```
 
 Esto afectaría únicamente al párrafo en primera posición (0). Y si queríamos afectar a todos los párrafos por igual, lo que corresponde hacer es algo como lo que sigue: 
 
@@ -51,7 +55,9 @@ for (var i = 0; i < parrafos.length; i++) {
 
 Pero, si ya estamos vinculando la biblioteca d3.js, podemos simplificarnos la vida tanto como esto: 
 
-`d3.selectAll("p").style("color", "red");`
+```
+d3.selectAll("p").style("color", "red");
+```
 
 - - - - 
 
