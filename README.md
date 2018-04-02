@@ -17,7 +17,8 @@ HTML y CSS ya son lenguajes conocidos. Lo nuevo es el SVG (Scalable Vector Graph
 
 A continuación, un ejemplo de `<svg></svg>` que tendría que ir dentro de un `<body></body>` dentro de un `<html></html>`:
 
-```<svg width="200" height="200" style="background:#ddd;">
+```
+<svg width="200" height="200" style="background:#ddd;">
 	<g transform="translate(0,0)">
 		<circle cx="60" cy="60" r="43" fill="#f77"/>
 		<text x="48" y="65" fill="white">¡Ay!</text>	
@@ -41,7 +42,8 @@ Recordarán que si queríamos manipular, vía DOM, un elemento como el párrafo,
 
 Esto afectaría únicamente al párrafo en primera posición (0). Y si queríamos afectar a todos los párrafos por igual, lo que corresponde hacer es algo como lo que sigue: 
 
-```var parrafos = document.getElementsByTagName("p");
+```
+var parrafos = document.getElementsByTagName("p");
 for (var i = 0; i < parrafos.length; i++) {
 	parrafos[i].style.setProperty("color", "red", null);
 }
