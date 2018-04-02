@@ -41,7 +41,7 @@ Una vez haya sido vinculada, estamos listos para simplificar el trabajo con dato
 Recordarán que si queríamos manipular, vía DOM, un elemento como el párrafo, teníamos que indicar algo como: 
 
 ```
-document.getElementsByTagName("p")[0].style.setProperty("color", "red", null);
+document.getElementsByTagName("p")[0].style.setProperty("color", "red");
 ```
 
 Esto afectaría únicamente al párrafo en primera posición (0). Y si queríamos afectar a todos los párrafos por igual, lo que corresponde hacer es algo como lo que sigue: 
@@ -49,7 +49,7 @@ Esto afectaría únicamente al párrafo en primera posición (0). Y si queríamo
 ```
 var parrafos = document.getElementsByTagName("p");
 for (var i = 0; i < parrafos.length; i++) {
-	parrafos[i].style.setProperty("color", "red", null);
+	parrafos[i].style.setProperty("color", "red");
 }
 ```
 
