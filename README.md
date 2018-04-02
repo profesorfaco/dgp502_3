@@ -11,7 +11,7 @@ En la [clase recién pasada](https://github.com/profesorfaco/dgp502_2), cerramos
 - [SVG](https://developer.mozilla.org/es/docs/Web/SVG) y [CANVAS](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Canvas_tutorial)
 - [D3.js](https://d3js.org/)
 
-[D3.js (Data-Driven Documents)](https://d3js.org/) es una biblioteca de JavaScript, desarrollada por [Mike Bostock](https://bost.ocks.org/mike/), que nos permite crear visualizaciones de datos en el navegador web, **utilizando SVG, HTML y CSS**.
+[D3.js (Data-Driven Documents)](https://d3js.org/) es una biblioteca de JavaScript, desarrollada por [Mike Bostock](https://bost.ocks.org/mike/), que nos permite crear visualizaciones de datos para la web, **utilizando SVG, HTML y CSS**.
 
 HTML y CSS ya son lenguajes conocidos. Lo nuevo es el SVG (Scalable Vector Graphics); [SVG](https://developer.mozilla.org/es/docs/Web/SVG) es un dialecto para la generación de gráficos, que provee elementos para definir posiciones, figuras básicas, paths, textos, transformaciones básicas, etc.
 
