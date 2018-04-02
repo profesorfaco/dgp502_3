@@ -28,7 +28,7 @@ A continuación, un ejemplo de `<svg></svg>` que tendría que ir dentro de un `<
 </svg>
 ```
 
-Como aprender SVG implica aprender un nuevo dialecto, [vamos a explorarlo un poco y de a poco](https://www.w3schools.com/graphics/svg_intro.asp), a la medida de lo justo y necesario.
+Como aprender SVG implica aprender un nuevo dialecto, [vamos a explorarlo un poco y de a poco](https://www.w3schools.com/graphics/svg_intro.asp) (nada más que lo justo y necesario).
 
 Ahora volvamos a [D3.js](https://d3js.org/). Como otras bibliotecas de Javascript, necesita ver vinculada a nuestro documento HTML. En este caso, podemos vincularla agregando: 
 
