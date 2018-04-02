@@ -59,6 +59,42 @@ Pero, si ya estamos vinculando la biblioteca [D3.js](https://d3js.org/), podemos
 d3.selectAll("p").style("color", "red");
 ```
 
+Veamos otro ejemplo. Si queremos agregar ítems a una lista con identidad determinada, podríamos crear una función:
+
+```
+<ul id="astronautas"></ul>
+<script>
+var data = ["Anton Shkaplerov","Scott Tingle","Norishige Kanai","Oleg Artemyev","Andrew Feustel","Richard Arnold"]
+var veces = data.length;
+function repite(n) {
+	var que = [];
+	var donde = document.getElementById('astronautas');
+	for (var x = 0; x < n; x++) {
+		que[x] = document.createElement('li');
+		que[x].textContent = data[x];
+		donde.appendChild(que[x]);
+	}
+};
+repite(veces);
+</script>
+```
+
+Usando D3.js, el mismo resultado se obtendría mediante lo que sigue:
+
+```
+<ul id="astronautas"></ul>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+var data = ["Anton Shkaplerov","Scott Tingle","Norishige Kanai","Oleg Artemyev","Andrew Feustel","Richard Arnold"]
+d3.select("#astronautas")
+.selectAll("li")
+.data(data)
+.enter()
+.append("li")
+.text(function(d) { return d + " "; });
+</script>
+```
+
 - - - - 
 
 [Avanzar a la siguiente clase](https://github.com/profesorfaco/dgp502_4/)
