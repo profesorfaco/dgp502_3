@@ -11,27 +11,44 @@ En la [clase recién pasada](https://github.com/profesorfaco/dgp502_2), cerramos
 - [SVG](https://developer.mozilla.org/es/docs/Web/SVG) y [CANVAS](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Canvas_tutorial)
 - [D3.js](https://d3js.org/)
 
+[d3.js (Data-Driven Documents)](https://d3js.org/) es una biblioteca de JavaScript desarrollada por [Mike Bostock](https://bost.ocks.org/mike/) para crear visualizaciones de datos dinámicas e interactivas en el navegador web **utilizando SVG, HTML y CSS**.
 
-Entre lo recién mencionado, tenemos 2 elementos de HTML como espacios para trabajar con otros lenguajes o dialectos, estos son `<svg></svg>` y `<canvas></canvas>`. Podrían pensarlas como los elementos `<style></style>` o `<script></script>`, que dentro suyo no contienen HTML, pero son parte del documento HTML.
+HTML y CSS ya son lenguajes conocidos. Lo nuevo es el SVG (Scalable Vector Graphics); [SVG](https://developer.mozilla.org/es/docs/Web/SVG) es un dialecto para la generación de gráficos, que provee elementos para definir posiciones, figuras básicas, paths, textos, transformaciones básicas, etc.
 
-Vamos con el primero: [SVG (Scalable Vector Graphics)](https://developer.mozilla.org/es/docs/Web/SVG) es un dialecto de marcado XML W3C para la generación de gráficos, con [sus propios elementos](https://developer.mozilla.org/es/docs/Web/SVG/Element).
+A continuación, un ejemplo de `<svg></svg>` que podríamos encontrar dentro de un `<body></body>`:
 
-Ahora, el segundo: [Canvas (en castellano, lienzo)](https://developer.mozilla.org/es/docs/Web/HTML/Canvas) se puede utilizar para dibujar gráficos a través de secuencias de comandos JavaScript: 
-
+```<svg width="200" height="200" style="background:#ddd;">
+	<g transform="translate(0,0)">
+		<circle cx="60" cy="60" r="43" fill="#f77"/>
+		<text x="48" y="65" fill="white">¡Ay!</text>	
+		<rect x="90" y="90" width="100" height="100" fill="#037"/>
+		<text x="113" y="145" fill="white">Disculpe</text>
+	</g>
+</svg>
 ```
-<canvas id="miCanvas" width="400" height="400" style="background:silver;"></canvas>
-<script>
-  var canvas = document.getElementById('miCanvas');
-  var context = canvas.getContext('2d');
-  var centerX = canvas.width / 2;
-  var centerY = canvas.height / 2;
-  var radius = 70;
-  context.beginPath();
-  context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-  context.fillStyle = '#333';
-  context.fill();
-</script>
+
+Como aprender SVG implica aprender un nuevo dialecto, [podríamos explorarlo de a poco](https://www.w3schools.com/graphics/svg_intro.asp), a la medida de lo justo y necesario.
+
+Ahora volvamos a [d3.js](https://d3js.org/). Como otras bibliotecas de Javascript, necesita ver vinculada a nuestro documento HTML. En este caso, podemos vincularla agregando: `<script src="https://d3js.org/d3.v5.min.js"></script>`
+
+Una vez ha sido vinculada, estamos listos para simplificar el trabajo en JavaScript. 
+
+Recordarán que si queríamos manipular, vía DOM, un elemento como el párrafo, teníamos que indicar algo como: 
+
+```document.getElementsByTagName("p")[0].style.setProperty("color", "red", null);```
+
+Esto afectaría únicamente al párrafo en primera posición (0). Y si queríamos afectar a todos los párrafos por igual, lo que corresponde hacer es algo como lo que sigue: 
+
+```var parrafo = document.getElementsByTagName("p");
+for (var i = 0; i < parrafo.length; i++) {
+var parrafo = parrafo.item(i);
+parrafo.style.setProperty("color", "red", null);
+}
 ```
+
+Pero, si ya estamos vinculando la biblioteca d3.js, podemos simplificarnos la vida tanto como esto: 
+
+`d3.selectAll("p").style("color", "red");`
 
 - - - - 
 
