@@ -11,11 +11,11 @@ En la [clase recién pasada](https://github.com/profesorfaco/dgp502_2), cerramos
 - [SVG](https://developer.mozilla.org/es/docs/Web/SVG) y [CANVAS](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Canvas_tutorial)
 - [D3.js](https://d3js.org/)
 
-[d3.js (Data-Driven Documents)](https://d3js.org/) es una biblioteca de JavaScript desarrollada por [Mike Bostock](https://bost.ocks.org/mike/) para crear visualizaciones de datos dinámicas e interactivas en el navegador web **utilizando SVG, HTML y CSS**.
+[D3.js (Data-Driven Documents)](https://d3js.org/) es una biblioteca de JavaScript, desarrollada por [Mike Bostock](https://bost.ocks.org/mike/), que nos permite crear visualizaciones de datos en el navegador web, **utilizando SVG, HTML y CSS**.
 
 HTML y CSS ya son lenguajes conocidos. Lo nuevo es el SVG (Scalable Vector Graphics); [SVG](https://developer.mozilla.org/es/docs/Web/SVG) es un dialecto para la generación de gráficos, que provee elementos para definir posiciones, figuras básicas, paths, textos, transformaciones básicas, etc.
 
-A continuación, un ejemplo de `<svg></svg>` que podríamos encontrar dentro de un `<body></body>`:
+A continuación, un ejemplo de `<svg></svg>` que tendría que ir dentro de un `<body></body>` dentro de un `<html></html>`:
 
 ```<svg width="200" height="200" style="background:#ddd;">
 	<g transform="translate(0,0)">
@@ -27,11 +27,11 @@ A continuación, un ejemplo de `<svg></svg>` que podríamos encontrar dentro de 
 </svg>
 ```
 
-Como aprender SVG implica aprender un nuevo dialecto, [podríamos explorarlo de a poco](https://www.w3schools.com/graphics/svg_intro.asp), a la medida de lo justo y necesario.
+Como aprender SVG implica aprender un nuevo dialecto, [vamos a explorarlo un poco y de a poco](https://www.w3schools.com/graphics/svg_intro.asp), a la medida de lo justo y necesario.
 
-Ahora volvamos a [d3.js](https://d3js.org/). Como otras bibliotecas de Javascript, necesita ver vinculada a nuestro documento HTML. En este caso, podemos vincularla agregando: `<script src="https://d3js.org/d3.v5.min.js"></script>`
+Ahora volvamos a [D3.js](https://d3js.org/). Como otras bibliotecas de Javascript, necesita ver vinculada a nuestro documento HTML. En este caso, podemos vincularla agregando: `<script src="https://d3js.org/d3.v5.min.js"></script>`
 
-Una vez ha sido vinculada, estamos listos para simplificar el trabajo en JavaScript. 
+Una vez haya sido vinculada, estamos listos para simplificar el trabajo con datos en JavaScript. 
 
 Recordarán que si queríamos manipular, vía DOM, un elemento como el párrafo, teníamos que indicar algo como: 
 
