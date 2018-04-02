@@ -94,6 +94,29 @@ d3.select("#astronautas")
 .text(function(d) { return d + " "; });
 </script>
 ```
+¿Y el SVG? De la misma manera que podemos manipular elementos del lenguaje HTML, podemos manipular elementos del dialecto SVG. Por ejemplo: 
+
+```
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+var data = ["Anton Shkaplerov","Scott Tingle","Norishige Kanai","Oleg Artemyev","Andrew Feustel","Richard Arnold"]
+var svg = d3.select("body").append("svg").attr("width", 800).attr("height", 500) .style("background", "#ccc")           
+var g = svg.selectAll("g").data(data).enter().append("g").attr("transform", function(d, i) {return "translate(0,0)";})
+g.append("circle").attr("cx", function(d, i) {return 100;}).attr("cy", function(d, i) {return i*60+100;}).attr("r", function(d) {
+      return 5;})
+g.append("text").attr("x", 120).attr("y", function(d, i) {return i*60+105;}).attr("font-family", "sans-serif").text(function(d) {return d;});
+</script>
+```
+
+Avanzaremos con los documentos del repositorio hasta poder comprender lo recién presentado.
+
+#### Referencias útiles:
+
+- [D3 Basics](https://website.education.wisc.edu/~swu28/d3t/concept.html)
+- [D3.js Tutorials - Learn D3.js Step by Step](http://www.tutorialsteacher.com/d3js/)
+- [INTRO TO D3.JS](https://square.github.io/intro-to-d3/)
+- [Three Little Circles](https://bost.ocks.org/mike/circles/)
+
 
 - - - - 
 
