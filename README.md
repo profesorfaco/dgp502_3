@@ -29,7 +29,9 @@ A continuación, un ejemplo de `<svg></svg>` que tendría que ir dentro de un `<
 
 Como aprender SVG implica aprender un nuevo dialecto, [vamos a explorarlo un poco y de a poco](https://www.w3schools.com/graphics/svg_intro.asp), a la medida de lo justo y necesario.
 
-Ahora volvamos a [D3.js](https://d3js.org/). Como otras bibliotecas de Javascript, necesita ver vinculada a nuestro documento HTML. En este caso, podemos vincularla agregando: `<script src="https://d3js.org/d3.v5.min.js"></script>`
+Ahora volvamos a [D3.js](https://d3js.org/). Como otras bibliotecas de Javascript, necesita ver vinculada a nuestro documento HTML. En este caso, podemos vincularla agregando: 
+
+```<script src="https://d3js.org/d3.v5.min.js"></script>```
 
 Una vez haya sido vinculada, estamos listos para simplificar el trabajo con datos en JavaScript. 
 
@@ -39,10 +41,9 @@ Recordarán que si queríamos manipular, vía DOM, un elemento como el párrafo,
 
 Esto afectaría únicamente al párrafo en primera posición (0). Y si queríamos afectar a todos los párrafos por igual, lo que corresponde hacer es algo como lo que sigue: 
 
-```var parrafo = document.getElementsByTagName("p");
-for (var i = 0; i < parrafo.length; i++) {
-var parrafo = parrafo.item(i);
-parrafo.style.setProperty("color", "red", null);
+```var parrafos = document.getElementsByTagName("p");
+for (var i = 0; i < parrafos.length; i++) {
+	parrafos[i].style.setProperty("color", "red", null);
 }
 ```
 
