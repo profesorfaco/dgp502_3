@@ -53,7 +53,7 @@ for (var i = 0; i < parrafos.length; i++) {
 }
 ```
 
-Pero, si ya estamos vinculando la biblioteca d3.js, podemos simplificarnos la vida tanto como esto: 
+Pero, si ya estamos vinculando la biblioteca [D3.js](https://d3js.org/), podemos simplificar lo anterior tanto como lo que sigue:
 
 ```
 d3.selectAll("p").style("color", "red");
