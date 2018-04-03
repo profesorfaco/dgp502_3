@@ -113,6 +113,7 @@ Avanzaremos con los documentos del repositorio hasta poder comprender lo recién
 #### Referencias útiles:
 
 - [D3 Basics](https://website.education.wisc.edu/~swu28/d3t/concept.html)
+- [D3 in Depth](http://d3indepth.com/)
 - [D3.js Tutorials - Learn D3.js Step by Step](http://www.tutorialsteacher.com/d3js/)
 - [INTRO TO D3.JS](https://square.github.io/intro-to-d3/)
 - [Three Little Circles](https://bost.ocks.org/mike/circles/)
