@@ -112,6 +112,7 @@ Avanzaremos con los documentos del repositorio hasta poder comprender lo recién
 
 #### Referencias útiles:
 
+- [D3 — Scott Murray — alignedleft](http://alignedleft.com/tutorials/d3)
 - [D3 Basics](https://website.education.wisc.edu/~swu28/d3t/concept.html)
 - [D3 in Depth](http://d3indepth.com/)
 - [D3.js Tutorials - Learn D3.js Step by Step](http://www.tutorialsteacher.com/d3js/)
